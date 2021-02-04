@@ -1,0 +1,227 @@
+.spin {
+  opacity: 1;
+  position: absolute;
+  top: 55%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: all 0.5s ease-in-out;
+}
+
+.devider {
+  min-height: 85vh;
+}
+
+.movie-info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-info-container .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4vw;
+}
+
+.top-bar .return {
+  transition: all 0.2s ease-in-out;
+}
+
+.top-bar .return:hover {
+  cursor: pointer;
+  color: #28d899;
+}
+
+.movie-info-container .specific-movie-card {
+  height: 38vw;
+  display: flex;
+  margin: 0 20vw;
+  background-color: rgba(235, 235, 235, 0.2);
+  border: 1px solid rgba(235, 235, 235, 0.2);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: top center;
+  box-shadow: 0 9px 28px rgba(255, 255, 255, 0.3222),
+    0 5px 12px rgba(48, 25, 179, 0.082);
+  padding: 2em;
+}
+
+.movie-info-container .specific-movie-card .specific-movie-image {
+  width: 50%;
+  padding: 0 2em 0 0;
+}
+
+.movie-info-container .specific-movie-card .specific-movie-image img {
+  width: 25vw;
+}
+
+.movie-info-container .specific-movie-card .specific-movie-info {
+  width: 50%;
+  position: relative;
+}
+
+.movie-info-container .specific-movie-card .specific-movie-info .aligned {
+  text-align: left;
+}
+
+.movie-info-container .specific-movie-card .specific-movie-info .aligned .plot {
+  padding: 1em 0 1.5em;
+}
+
+.movie-info-container .specific-movie-card .specific-movie-info h2 {
+  font-size: 2.7vw;
+  margin: 0;
+  padding-bottom: 0.5em;
+  letter-spacing: 1px;
+  -webkit-text-stroke: 1.2px rgba(218, 133, 133, 0.5);
+  color: #09ce75;
+}
+
+.movie-info-container .specific-movie-card .specific-movie-info p {
+  font-size: 1.2vw;
+  margin: 0;
+  padding-bottom: 0.2em;
+}
+
+.movie-info-container .specific-movie-card .specific-movie-info button {
+  font-size: 1.5vw;
+  font-weight: 600;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(50%);
+  padding: 0.1em 0.7em 0.3em;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 2px 4px 5px rgba(255, 255, 255, 0.3222),
+    0 5px 12px rgba(48, 25, 179, 0.082);
+  transition: all 0.3s ease-in-out;
+  border-radius: 0.2em;
+  border: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+.movie-info-container .specific-movie-card .specific-movie-info button .imdb {
+  width: 2.5em;
+  height: 1.1em;
+  padding: 0 0.2em;
+}
+
+.movie-info-container .specific-movie-card .specific-movie-info button:hover {
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.222),
+    0 20px 7px rgba(48, 25, 179, 0.082);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (max-width: 1000px) {
+  .movie-info-container {
+    height: auto;
+  }
+
+  .movie-info-container .specific-movie-card {
+    height: auto;
+    flex-direction: row;
+    margin-top: 2em;
+    margin: 0 10vw;
+  }
+
+  .movie-info-container .specific-movie-card .specific-movie-info {
+    padding-left: 3em;
+  }
+
+  .movie-info-container .specific-movie-card .specific-movie-info h2 {
+    font-size: 3.2vw;
+  }
+
+  .movie-info-container .specific-movie-card .specific-movie-info p {
+    font-size: 1.6vw;
+  }
+
+  .movie-info-container .specific-movie-card .specific-movie-image {
+    padding: 0;
+  }
+
+  .movie-info-container .specific-movie-card .specific-movie-image img {
+    width: 36vw;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .top-bar .return {
+    font-size: 3.5vw;
+  }
+
+  .movie-info-container .specific-movie-card {
+    flex-direction: column-reverse;
+    margin-top: 2em;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .movie-info-container .specific-movie-card .specific-movie-info {
+    padding: 0 4vw 4vw;
+    margin-bottom: 2em;
+    width: auto;
+  }
+
+  .movie-info-container .specific-movie-card .specific-movie-info h2 {
+    font-size: 5vw;
+    padding-bottom: 1.5em;
+  }
+
+  .movie-info-container .specific-movie-card .specific-movie-info p {
+    font-size: 2.5vw;
+  }
+
+  .movie-info-container .specific-movie-card .specific-movie-info button {
+    font-size: 2vw;
+  }
+
+  .movie-info-container .specific-movie-card .specific-movie-image {
+    width: auto;
+  }
+
+  .movie-info-container .specific-movie-card .specific-movie-image img {
+    width: 50vw !important;
+  }
+
+  .movie-info-container .header h1 {
+    font-size: 6vw;
+  }
+
+  .movie-info-container .return {
+    font-size: 3.5vw;
+  }
+
+  .spin {
+    color: white;
+    left: 39%;
+    top: 40%;
+    transform: scale(0.7);
+  }
+
+  .spin #camera-body,
+  #reel-1,
+  #reel-2 {
+    fill: black !important;
+  }
+
+  .spin span {
+    font-family: "Open Sans", arial, sans-serif;
+    font-size: 1.2em;
+    font-weight: lighter;
+    font-weight: 300;
+    line-height: 2em;
+    display: flex;
+  }
+}

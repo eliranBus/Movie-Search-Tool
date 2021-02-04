@@ -1,0 +1,26 @@
+ h1 {
+    font-size: 3vw;
+    font-weight: 200;
+    letter-spacing: -1px;
+  }
+  
+ h1:hover img {
+    transform: scale(0.8);
+  }
+
+  h1 .magnifying img {
+    width: 1.3em;
+    position: absolute;
+    top: 0.95em;
+    transition: all 0.3s ease-in-out;
+  }
+  
+h1 .bold {
+    font-weight: 600 !important;
+    letter-spacing: 1px;
+    color: rgba(235, 235, 235, 0.7);
+  }
+
+  h1 .bold .space {
+    margin-right: 0.95em;
+  }

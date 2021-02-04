@@ -1,0 +1,316 @@
+body {
+  overflow: scroll;
+}
+
+.App {
+  text-align: center;
+  height: 100vh;
+  position: relative;
+}
+
+html {
+  background-color: black;
+}
+
+body {
+  height: 100vh;
+  background-image: url("./assets/images/bg2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  font-weight: 200;
+  overflow-x: hidden;
+}
+
+.results-container {
+  /* opacity: 0; */
+  transition: 2s ease-in-out;
+  margin: 0 4vw;
+  min-height: 85vh;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4vw 2em;
+}
+
+.top-bar form {
+  width: 35%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 0.6em;
+}
+
+.top-bar form input {
+  width: 70%;
+  height: 3vw;
+  background-color: rgba(235, 235, 235, 0.5);
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3);
+  font-size: 1.5vw;
+  padding: 0 1em 0.2em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  border: none;
+  letter-spacing: 0.5px;
+  color: white;
+}
+
+.top-bar form input::placeholder {
+  color: white;
+}
+
+.top-bar form button {
+  background-image: url("./assets/images/search.png");
+  background-size: cover;
+  width: 4vw;
+  height: 4vw;
+  background-color: transparent;
+  border: none;
+  margin: 0.3em 0 0 2vw;
+  transition: 0.2s ease-in-out;
+}
+
+.top-bar form button:focus {
+  outline: none;
+}
+
+.top-bar form button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.cta {
+  width: 100%;
+  position: absolute;
+  top: 12em;
+  left: 54%;
+  transform: translateX(-50%);
+}
+
+.cta h3 {
+  font-weight: 200;
+  font-size: 2.5vw;
+  text-shadow: 5px 5px 5px rgba(146, 124, 124, 0.9);
+}
+
+.cta h3 .arrow {
+  width: 10vw;
+  transform: rotate(-90deg) translateX(0.7em);
+}
+
+.separator {
+  margin: 1em 0;
+  display: flex;
+  align-items: center;
+}
+
+.separator .line {
+  height: 1px;
+  flex: 1;
+  /* background-color:rgba(235, 235, 235, 0.5); */
+  border: 0;
+  background: radial-gradient(
+    rgba(235, 235, 235, 0.5) 40%,
+    rgba(241, 212, 121, 0) 80%
+  );
+}
+
+.separator h2 {
+  padding: 0 2rem;
+  font-size: 2em;
+  -webkit-text-stroke: 2px rgba(0, 0, 0, 0.4);
+  text-shadow: 2px 2px 2px rgba(146, 124, 124, 0.8);
+}
+
+.results-container .total-results {
+  font-size: 1.1em;
+  color: rgba(235, 235, 235, 0.7);
+  letter-spacing: 0.5px;
+  text-align: left;
+  padding-left: 0.8em;
+}
+
+.results-container .cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1em;
+}
+
+.results-container .card-container {
+  background-color: rgba(235, 235, 235, 0.2);
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 0 19%;
+  border: 1px solid rgba(235, 235, 235, 0.2);
+  box-shadow: 0 9px 28px rgba(255, 255, 255, 0.3222),
+    0 5px 12px rgba(48, 25, 179, 0.082);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+}
+
+.results-container .card-container:hover {
+  cursor: pointer;
+  box-shadow: 0 5px 28px rgba(255, 255, 255, 0.222),
+    0 20px 7px rgba(48, 25, 179, 0.082);
+  transform: scale(0.97);
+}
+
+.results-container .card-container .movie-poster img {
+  width: 17vw;
+  height: 25vw !important;
+  height: 100%;
+}
+
+.results-container .card-container .movie-info {
+  height: 8em;
+  width: 100%;
+  text-align: center;
+  padding: 0 0.8em;
+}
+
+.results-container .card-container .read-more {
+  color: #09ce75;
+  font-size: 1em;
+  font-weight: 700;
+  padding: 1em 0;
+}
+
+.results-container .card-container .movie-info .movie-title {
+  font-size: 1.2vw;
+  font-weight: 700;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+  color: #09ce75;
+  letter-spacing: 1px;
+}
+
+.results-container .card-container .movie-info .movie-release-date {
+  margin-bottom: 1em;
+  font-size: 1vw;
+}
+
+.results-container .card-container .movie-info .movie-release-date .date {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+  color: #09ce75;
+}
+
+.results-container .card-container .movie-info .movie-rating {
+  font-size: 1vw;
+}
+
+.results-container .card-container .movie-info .movie-rating .rating {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+  color: #09ce75;
+}
+
+.results-container .card-container .movie-info .movie-overview {
+  text-align: justify;
+  font-size: 0.9em;
+  padding-bottom: 1em;
+}
+
+@media screen and (max-width: 1000px) {
+  .results-container .card-container {
+    flex: 1 0 25%;
+  }
+
+  .results-container .cards-wrapper {
+    margin-top: 0;
+  }
+
+  .top-bar form button {
+    margin: 0.4vw 0 0 2vw;
+  }
+
+  .results-container .card-container .movie-poster {
+    flex: 1;
+  }
+
+  .separator {
+    /* margin: 2em; */
+  }
+
+  .separator h2 {
+    font-size: 4vw;
+    padding: 0 1em;
+  }
+
+  .separator .line {
+    flex: 1 1 25%;
+  }
+
+  .results-container .total-results {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .top-bar {
+    padding-bottom: 0;
+  }
+
+  .top-bar h1 {
+    font-size: 6vw;
+  }
+
+  .top-bar form {
+    margin-top: 0.2em;
+    width: 40%;
+  }
+
+  .top-bar form button {
+    width: 5vw;
+    height: 5vw;
+  }
+
+  .top-bar form input {
+    height: 4vw;
+    font-size: 3vw;
+  }
+
+  .cta {
+    transform: scale(1.8);
+    left: 6%;
+  }
+
+  .results-container .card-container {
+    flex-direction: column;
+    flex: 1 0 29%;
+    height: auto;
+  }
+
+  .results-container .card-container .movie-info {
+    width: auto;
+    padding-bottom: 3vw;
+    font-size: 2vw;
+    height: auto;
+  }
+
+  .results-container .card-container .movie-info .movie-title {
+    height: 5em;
+  }
+
+  .results-container .card-container .movie-info .movie-title h3 {
+    font-size: 2.5vw;
+  }
+
+  .results-container .card-container .movie-info .movie-release-date {
+    margin-bottom: 1em;
+    font-size: 2vw;
+    padding-top: 1em;
+  }
+
+  .results-container .card-container .movie-info .movie-overview {
+    font-size: 1.2em;
+  }
+
+  .results-container .card-container .read-more {
+    font-size: 0.7em;
+  }
+}
